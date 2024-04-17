@@ -18,32 +18,32 @@ public class Main {
                 case 1:
                     //Dólar -> Peso Argentino
                     result = converter.dolarToOtherCoin("ARS");
-                    messages.getresultMessage(result);
+                    messages.getResultMessage(result);
                     break;
                 case 2:
                     //Peso Argentino -> Dólar
                     result = converter.otherCoinToDolar("ARS");
-                    messages.getresultMessage(result);
+                    messages.getResultMessage(result);
                      break;
                 case 3:
                     //Dólar -> Real Brasileiro
                     result = converter.dolarToOtherCoin("BRL");
-                    messages.getresultMessage(result);
+                    messages.getResultMessage(result);
                     break;
                 case 4:
                     //Real Brasileiro -> Dólar
                     result = converter.otherCoinToDolar("BRL");
-                    messages.getresultMessage(result);
+                    messages.getResultMessage(result);
                     break;
                 case 5:
                     //Dólar -> Peso Colombiano
                     result = converter.dolarToOtherCoin("COP");
-                    messages.getresultMessage(result);
+                    messages.getResultMessage(result);
                     break;
                 case 6:
                     //Peso Colombiano -> Dólar
                     result = converter.otherCoinToDolar("COP");
-                    messages.getresultMessage(result);
+                    messages.getResultMessage(result);
                     break;
                 case 7:
                     messages.getFinalMessage();

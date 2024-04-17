@@ -30,11 +30,11 @@ public class Messages {
         return scanner.nextInt();
     }
 
-    public void getvalueConvertMessage() {
+    public void getValueConvertMessage() {
         System.out.println("Digite o valor que deseja converter:");
     }
 
-    public void getresultMessage(double result) {
+    public void getResultMessage(double result) {
         System.out.println("Valor convertido = " + result);
     }
 

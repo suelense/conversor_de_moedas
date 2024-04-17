@@ -15,14 +15,14 @@ public class Converter {
     }
 
     public double dolarToOtherCoin(String coin) {
-        messages.getvalueConvertMessage();
+        messages.getValueConvertMessage();
         double valueToConvert = scanner.nextDouble();
         double coinValue = newRate.getRate(coin);
         return valueToConvert * coinValue;
     }
 
     public double otherCoinToDolar(String coin) {
-        messages.getvalueConvertMessage();
+        messages.getValueConvertMessage();
         double valueToConvert = scanner.nextDouble();
         double coinValue = newRate.getRate(coin);
         return valueToConvert / coinValue;
