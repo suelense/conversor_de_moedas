@@ -12,7 +12,7 @@ import java.net.http.HttpResponse;
 
 public class GetRates {
     // Setting URL
-    private String url = "https://v6.exchangerate-api.com/v6/2a922194323034021e38feba/latest/USD";
+    private final String url = "https://v6.exchangerate-api.com/v6/2a922194323034021e38feba/latest/USD";
 
     public GetRates() throws IOException, InterruptedException {
     }
