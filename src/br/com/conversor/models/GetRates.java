@@ -25,7 +25,6 @@ public class GetRates {
     JsonElement jelement = JsonParser.parseString(response.body());
     JsonObject rate = jelement.getAsJsonObject().getAsJsonObject("conversion_rates");
 
-
     public double getRate(String code) {
         return(rate.get(code).getAsDouble());
     }
