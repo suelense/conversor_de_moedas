@@ -1,41 +1,58 @@
 package br.com.conversor.models;
 
-import java.util.Scanner;
-
 public class Messages {
-    Scanner scanner = new Scanner(System.in);
 
-    public void getFristMessage() {
+    public void getFirstMessage() {
         System.out.println("""
-                ***************************************
-                          CONVERSOR DE MOEDAS
-                ***************************************
+                *****************************************
+                           CONVERSOR DE MOEDAS
+                *****************************************
                 """);
     }
 
-    public int getMenuMessage() {
+    public void getMenuMessage() {
         System.out.println("""
-                Opções:
-                
-                1 - Dólar           ->  Peso Argentino
-                2 - Peso Argentino  ->  Dólar
-                3 - Dólar           ->  Real Brasileiro
-                4 - Real Brasileiro ->  Dólar
-                5 - Dólar           ->  Peso Colombiano
-                6 - Peso Colombiano ->  Dólar
-                7 - Sair
-                
-                Digite a opção desejada:
+                -----------------------------------------
+                |   CÓDIGO  |   DESCRIÇÃO:              |
+                -----------------------------------------
+                |   ARS	    |   Peso Argentino          |
+                |   BOB     |   Boliviano               |
+                |   BRL     |   Real Brasileiro         |
+                |   CLP     |   Peso Chileno            |
+                |   COP     |   Peso Colombiano         |
+                |   EUR     |   Euro                    |
+                |   FKP     |   Libra Ilhas Falkland    |
+                |   GYD     |   Dólar da Guiana         |
+                |   PYG     |   Guarani Paraguaio       |
+                |   PEN     |   Sol Peruano             |
+                |   SRD     |   Dólar do Suriname       |
+                |   USD     |   Dólar Estados Unidos    |
+                |   UYU     |   Peso Uruguaio           |
+                -----------------------------------------
                 """);
-        return scanner.nextInt();
     }
 
-    public void getValueConvertMessage() {
+    public void getValueMessage() {
         System.out.println("Digite o valor que deseja converter:");
     }
 
-    public void getResultMessage(double result) {
-        System.out.println("Valor convertido = " + result);
+    public void getFirstCodeOfCoin() {
+        System.out.println("Digite o código da moeda de Origem:");
+    }
+
+    public void getFinalCodeOfCoin() {
+        System.out.println("Digite o código da moeda de Destino:");
+    }
+
+    public void getResultMessage(double value, String firstCoinCode, String finalCoinCode, double result) {
+        System.out.println(value + " " + firstCoinCode + " = " + result + " " +finalCoinCode);
+    }
+
+    public void getOptionYesNo() {
+        System.out.println("""
+                Deseja fazer uma nova conversão?
+                1-SIM 2-NÃO
+                Digite a opção desejada:""");
     }
 
     public void getFinalMessage() {

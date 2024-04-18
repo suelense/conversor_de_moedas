@@ -2,50 +2,26 @@ import br.com.conversor.calculator.Converter;
 import br.com.conversor.models.Messages;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         int option = 0;
-        double result;
         Messages messages = new Messages();
         Converter converter = new Converter();
+        Scanner scanner = new Scanner(System.in);
 
-        messages.getFristMessage();
+        messages.getFirstMessage();
 
-        while (option != 7) {
-            option = messages.getMenuMessage();
+        while (option != 2) {
+            messages.getMenuMessage();
+            converter.convertValue();
+            messages.getOptionYesNo();
+            option = scanner.nextInt();
             switch (option) {
                 case 1:
-                    //Dólar -> Peso Argentino
-                    result = converter.dolarToOtherCoin("ARS");
-                    messages.getResultMessage(result);
                     break;
                 case 2:
-                    //Peso Argentino -> Dólar
-                    result = converter.otherCoinToDolar("ARS");
-                    messages.getResultMessage(result);
-                     break;
-                case 3:
-                    //Dólar -> Real Brasileiro
-                    result = converter.dolarToOtherCoin("BRL");
-                    messages.getResultMessage(result);
-                    break;
-                case 4:
-                    //Real Brasileiro -> Dólar
-                    result = converter.otherCoinToDolar("BRL");
-                    messages.getResultMessage(result);
-                    break;
-                case 5:
-                    //Dólar -> Peso Colombiano
-                    result = converter.dolarToOtherCoin("COP");
-                    messages.getResultMessage(result);
-                    break;
-                case 6:
-                    //Peso Colombiano -> Dólar
-                    result = converter.otherCoinToDolar("COP");
-                    messages.getResultMessage(result);
-                    break;
-                case 7:
                     messages.getFinalMessage();
                     break;
                 default:

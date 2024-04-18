@@ -8,23 +8,19 @@ import java.util.Scanner;
 
 public class Converter {
     Messages messages = new Messages();
-    GetRates newRate = new GetRates();
     Scanner scanner = new Scanner(System.in);
+    GetRates newRate = new GetRates();
 
-    public Converter() throws IOException, InterruptedException {
-    }
 
-    public double dolarToOtherCoin(String coin) {
-        messages.getValueConvertMessage();
-        double valueToConvert = scanner.nextDouble();
-        double coinValue = newRate.getRate(coin);
-        return valueToConvert * coinValue;
-    }
-
-    public double otherCoinToDolar(String coin) {
-        messages.getValueConvertMessage();
-        double valueToConvert = scanner.nextDouble();
-        double coinValue = newRate.getRate(coin);
-        return valueToConvert / coinValue;
+    public void convertValue() throws IOException, InterruptedException {
+        messages.getValueMessage();
+        double value = scanner.nextDouble();
+        messages.getFirstCodeOfCoin();
+        String firstCoinCode = scanner.next();
+        messages.getFinalCodeOfCoin();
+        String finalCoinCode = scanner.next();
+        double rate = newRate.getRate(firstCoinCode, finalCoinCode);
+        double convertedValue = value * rate;
+        messages.getResultMessage(value, firstCoinCode, finalCoinCode, convertedValue);
     }
 }
